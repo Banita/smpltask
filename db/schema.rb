@@ -11,7 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130411170949) do
+ActiveRecord::Schema.define(:version => 20130411182348) do
+
+  create_table "secret_codes", :force => true do |t|
+    t.integer  "user_id_id", :precision => 38, :scale => 0
+    t.datetime "created_at",                                :null => false
+    t.datetime "updated_at",                                :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "firstname"
