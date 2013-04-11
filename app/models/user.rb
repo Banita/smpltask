@@ -9,5 +9,8 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me
   attr_accessible :email, :firstname, :lastname
   attr_accessor :secret_code
+  attr_accessible :secret_code
+  has_one :secret_code
+  validate :secret_code
 
 end
