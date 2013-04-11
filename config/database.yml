@@ -1,0 +1,5 @@
+development:
+ adapter: oracle_enhanced
+ database: XE
+ username: sample_task
+ password: sample_task
