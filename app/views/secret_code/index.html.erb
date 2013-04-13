@@ -1,0 +1,5 @@
+<%= form_for :number,:url=> {:action =>"create"} do |f| %>
+<%=f.label :number_of_code%>
+<%=f.text_field :number_of_code %>
+<%= f.submit "generate code" %>
+<% end %>

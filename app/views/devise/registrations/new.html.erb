@@ -14,7 +14,8 @@
 
   <div><%= f.label :secret_code %><br />
   <%= f.text_field :secret_code ,:value => 'foobar'%></div>
-
+  <%=f.select(:secret_code, options_for_select(SecretCode.all,:id,:secret_code))%>
+  
   <div><%= f.submit "Sign up" %></div>
 <% end %>
 
