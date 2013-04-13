@@ -1,7 +1,8 @@
 class CreateSecretCodes < ActiveRecord::Migration
   def change
     create_table :secret_codes do |t|
-    	t.references :user_id
+    	t.string :secret_code
+    	t.references :user
 
       t.timestamps
     end
