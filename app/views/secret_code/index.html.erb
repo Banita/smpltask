@@ -1,5 +1,16 @@
 <%= form_for :number,:url=> {:action =>"create"} do |f| %>
 <%=f.label :number_of_code%>
-<%=f.text_field :number_of_code %>
+<%=f.select(:number_of_code,[1,10,20,30,40,50],:selected=>10)%>
 <%= f.submit "generate code" %>
 <% end %>
+
+<h3>List of SecretCodes</h3>
+<%@secret_codes.each do|sc|%>
+SecretCode  :<%=sc.secret_code%></br>
+<%if sc.user_id =''%>
+User Email  :TimePass
+<%else%>
+User Email  :<%=sc.user.email%>
+<%end%></br>
+<% end %>
+
