@@ -8,9 +8,15 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me
   attr_accessible :email, :firstname, :lastname
-  attr_accessor :secret_code
-  attr_accessible :secret_code
+  attr_accessor :code
+  attr_accessible :code
   has_one :secret_code
-  validate :secret_code
+  validate :code
+  # after_create :create_user_id
+
+  # def create_user_id
+  # a=SecretCode.find_by_secret_code(:code)
+  #  a.user_id=self.id
+  # end
 
 end

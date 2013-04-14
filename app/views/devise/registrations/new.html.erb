@@ -12,10 +12,10 @@
   <div><%= f.label :password_confirmation %><br />
   <%= f.password_field :password_confirmation %></div>
 
-  <div><%= f.label :secret_code %><br />
+  <div><%= f.label :code %><br />
     
-  <%= f.text_field :secret_code ,:value => 'foobar'%></div> 
-  <%=f.collection_select :secret_code,SecretCode.where("user_id is null"),:id,:secret_code, {:include_blank => 'Please select'}%>
+  <%= f.text_field :code ,:value => 'foobar'%></div> 
+  <%=f.collection_select :code,SecretCode.where("user_id is null"),:id,:secret_code, {:include_blank => 'Please select'}%>
  
   <div><%= f.submit "Sign up" %></div>
 <% end %>
