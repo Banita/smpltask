@@ -12,11 +12,13 @@ class User < ActiveRecord::Base
   attr_accessible :code
   has_one :secret_code
   validate :code
-  # after_create :create_user_id
+  after_create :create_user
 
-  # def create_user_id
-  # a=SecretCode.find_by_secret_code(:code)
-  #  a.user_id=self.id
-  # end
+  def create_user
+    a=SecretCode.find(code)
+    a.user_id=self.id
+    a.save
+   #p "code is #{code}"
+  end
 
 end

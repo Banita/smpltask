@@ -14,7 +14,7 @@
 
   <div><%= f.label :code %><br />
     
-  <%= f.text_field :code ,:value => 'foobar'%></div> 
+ 
   <%=f.collection_select :code,SecretCode.where("user_id is null"),:id,:secret_code, {:include_blank => 'Please select'}%>
  
   <div><%= f.submit "Sign up" %></div>
