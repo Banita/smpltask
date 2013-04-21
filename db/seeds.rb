@@ -5,4 +5,4 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-user=User.create!({ :firstname=>'Admin',:lastname=>'',:email => 'admin@gmail.com',:password => 'password', :password_confirmation => 'password'})
+user=User.create!({ :firstname=>'Admin',:lastname=>'',:email => 'admin@gmail.com',:password => 'password', :password_confirmation => 'password',:code=>"10000"})#change :code according to default secretecode id

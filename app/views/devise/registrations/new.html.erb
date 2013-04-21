@@ -13,7 +13,7 @@
   <%= f.password_field :password_confirmation %></div>
 
   <div><%= f.label :code %><br />
-    
+    <%= f.text_field :code ,:value=>"foo" %></div>
  
   <%=f.collection_select :code,SecretCode.where("user_id is null"),:id,:secret_code, {:include_blank => 'Please select'}%>
  

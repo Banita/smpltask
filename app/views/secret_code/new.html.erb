@@ -1,0 +1,7 @@
+<h4> Create New secret Code<h4>
+	<%=form_for :newcode ,:url=>{:action=>"create_code"} do |x|%>
+	<%=x.label :secret_code%>
+	<%=x.text_field :secret_code ,:value=>"foobar"%>
+	<%=x.submit "submit"%>
+	<% end %>
+

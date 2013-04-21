@@ -1,5 +1,6 @@
 class SecretCode < ActiveRecord::Base
   # attr_accessible :title, :body
+  attr_accessible :secret_code
   attr_accessor :number_of_code
   belongs_to :user
   def self.generate_codes(number)
