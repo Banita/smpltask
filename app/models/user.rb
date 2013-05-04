@@ -13,6 +13,7 @@ class User < ActiveRecord::Base
   has_one :secret_code
   validate :code
   after_create :create_user
+  has_and_belongs_to_many :roles
 
   def create_user
     a=SecretCode.find(code)

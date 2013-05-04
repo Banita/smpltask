@@ -28,5 +28,11 @@ class Ability
     #
     # See the wiki for details:
     # https://github.com/ryanb/cancan/wiki/Defining-Abilities
+    user ||= User.new # guest user (not logged in)
+       user.roles.each do |x|
+         if x.name.to_sym == :admin
+             can :manage, :all
+          end
+       end
   end
 end

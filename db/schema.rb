@@ -11,7 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130411182348) do
+ActiveRecord::Schema.define(:version => 20130421172627) do
+
+  create_table "roles", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "roles_users", :id => false, :force => true do |t|
+    t.integer "role_id", :precision => 38, :scale => 0
+    t.integer "user_id", :precision => 38, :scale => 0
+  end
 
   create_table "secret_codes", :force => true do |t|
     t.string   "secret_code"
