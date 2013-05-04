@@ -12,11 +12,18 @@
   <div><%= f.label :password_confirmation %><br />
   <%= f.password_field :password_confirmation %></div>
 
+<<<<<<< HEAD
   <div><%= f.label :code %><br />
     <%= f.text_field :code ,:value=>"foo" %></div>
  
   <%=f.collection_select :code,SecretCode.where("user_id is null"),:id,:secret_code, {:include_blank => 'Please select'}%>
  
+=======
+  <div><%= f.label :secret_code %><br />
+  <%= f.text_field :secret_code ,:value => 'foobar'%></div>
+  <%=f.select(:secret_code, options_for_select(SecretCode.all,:id,:secret_code))%>
+  
+>>>>>>> f0fe7efcee3f608d1553babfd2cf7687cac3e947
   <div><%= f.submit "Sign up" %></div>
 <% end %>
 

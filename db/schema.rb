@@ -11,6 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(:version => 20130421172627) do
 
   create_table "roles", :force => true do |t|
@@ -29,6 +30,15 @@ ActiveRecord::Schema.define(:version => 20130421172627) do
     t.integer  "user_id",     :precision => 38, :scale => 0
     t.datetime "created_at",                                 :null => false
     t.datetime "updated_at",                                 :null => false
+=======
+ActiveRecord::Schema.define(:version => 20130413121834) do
+
+  create_table "secret_codes", :force => true do |t|
+    t.integer  "user_id",     :precision => 38, :scale => 0
+    t.datetime "created_at",                                 :null => false
+    t.datetime "updated_at",                                 :null => false
+    t.string   "secret_code"
+>>>>>>> f0fe7efcee3f608d1553babfd2cf7687cac3e947
   end
 
   create_table "users", :force => true do |t|

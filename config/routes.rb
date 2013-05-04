@@ -1,6 +1,9 @@
 SampleTask::Application.routes.draw do
   devise_for :users
+<<<<<<< HEAD
   
+=======
+>>>>>>> f0fe7efcee3f608d1553babfd2cf7687cac3e947
   get 'secret_code/index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
